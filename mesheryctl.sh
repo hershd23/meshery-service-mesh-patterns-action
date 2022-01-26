@@ -33,6 +33,7 @@ main() {
 	if [ -z "$pattern_file" ]
 	then
 		mesheryctl pattern apply --file $pattern_url -t ~/auth.json
+		mesheryctl pattern apply --file $pattern_url -t ~/auth.json
 	else
 		mesheryctl pattern apply --file $pattern_file -t ~/auth.json
 	fi
