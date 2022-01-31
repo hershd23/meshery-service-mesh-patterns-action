@@ -24,6 +24,8 @@ main() {
 	pwd
 	pwd
 	
+	kubectl config view
+	
 	kubectl config view --minify --flatten > ~/minified_config
 	mv ~/minified_config ~/.kube/config
 	
