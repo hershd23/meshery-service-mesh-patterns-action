@@ -26,6 +26,8 @@ main() {
 	
 	kubectl config view --minify --flatten > ~/minified_config
 	mv ~/minified_config ~/.kube/config
+	
+	kubectl config view
 
 	curl -L https://git.io/meshery | PLATFORM=$meshery_platform bash -
 
