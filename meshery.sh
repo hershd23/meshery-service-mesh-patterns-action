@@ -20,7 +20,10 @@ main() {
 	else
 		echo '{ "meshery-provider": "Meshery", "token": null }' | jq -c '.token = "'$provider_token'"' > ~/auth.json
 	fi
-
+	
+	pwd
+	pwd
+	
 	kubectl config view --minify --flatten > ~/minified_config
 	mv ~/minified_config ~/.kube/config
 
