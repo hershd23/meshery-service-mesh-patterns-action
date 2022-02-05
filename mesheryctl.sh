@@ -28,18 +28,18 @@ main() {
 			docker network connect minikube meshery_meshery-"$shortName"_1
 		done
 
-	mesheryctl system config minikube 
+	mesheryctl system config minikube -t ~/auth.json
 
 	if [ -z "$pattern_file" ]
 	then
 		echo "Fetching from URL"
 		echo $pattern_url
-		mesheryctl pattern apply --file $pattern_url 
+		mesheryctl pattern apply --file "$pattern_url" -t ~/auth.json
 	else
 		echo "Fetching from File"
 		echo $pattern_file
 		ls -al
-		mesheryctl pattern apply --file $pattern_file 
+		mesheryctl pattern apply --file "$pattern_file" -t ~/auth.json
 	fi
 
 	sleep 30s
