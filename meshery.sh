@@ -34,6 +34,8 @@ main() {
 	kubectl config view
 
 	curl -L https://git.io/meshery | PLATFORM=$meshery_platform bash -
+	
+	mesheryctl system start -p "$meshery_platform"
 
 	sleep 30
 }
